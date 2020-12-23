@@ -4,7 +4,9 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
-var ground, gameState,engine, world,dustbin,paper;
+var ground, gameState,engine, world;
+var dustbin,paper;
+
 function setup() {
   createCanvas(800, 400);
   rectMode(CENTER);
@@ -17,8 +19,7 @@ function setup() {
 
   dustbin = new DustBin(720, 390, 100, 10);
   paper = new Paper(100, 300, 10);
-  ground = Bodies.rectangle(width / 2, 390, width, 10,
-  {
+  ground = Bodies.rectangle(width / 2, 390, width, 10,{
     isStatic: true
   });
   ground.shapeColor = "yellow";
